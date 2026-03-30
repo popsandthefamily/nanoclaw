@@ -1,0 +1,304 @@
+<!--
+  ETSY INFOGRAPHIC BASE TEMPLATE
+  Rendered by Puppeteer at 2000x2000px
+  Brand variables injected from BRAND.json at render time
+  
+  Usage: Replace {{VARIABLES}} with content, render via Puppeteer
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="{{GOOGLE_FONTS_URL}}" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  :root {
+    --primary: {{PRIMARY}};
+    --secondary: {{SECONDARY}};
+    --accent: {{ACCENT}};
+    --dark: {{DARK}};
+    --light: {{LIGHT}};
+    --white: {{WHITE}};
+    --text-primary: {{TEXT_PRIMARY}};
+    --text-secondary: {{TEXT_SECONDARY}};
+  }
+  
+  body {
+    width: 2000px;
+    height: 2000px;
+    font-family: '{{BODY_FONT}}', system-ui, sans-serif;
+    background: var(--light);
+    color: var(--text-primary);
+    overflow: hidden;
+  }
+
+  /* ====== LAYOUT: WHATS INCLUDED ====== */
+  .whats-included {
+    padding: 120px 140px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .whats-included .badge {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--white);
+    font-size: 28px;
+    font-weight: 600;
+    padding: 8px 24px;
+    border-radius: 6px;
+    margin-bottom: 32px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  .whats-included h1 {
+    font-family: '{{HEADING_FONT}}', system-ui, sans-serif;
+    font-weight: {{HEADING_WEIGHT}};
+    font-size: 72px;
+    color: var(--primary);
+    margin-bottom: 16px;
+    line-height: 1.1;
+  }
+  .whats-included .subtitle {
+    font-size: 32px;
+    color: var(--text-secondary);
+    margin-bottom: 60px;
+  }
+  .whats-included .checklist {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 60px;
+  }
+  .whats-included .checklist li {
+    font-size: 30px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    line-height: 1.4;
+  }
+  .whats-included .checklist .check {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    background: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 20px;
+    margin-top: 4px;
+  }
+  .whats-included .footer-bar {
+    margin-top: auto;
+    padding-top: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 2px solid var(--primary);
+  }
+  .whats-included .footer-bar img { height: 48px; }
+  .whats-included .footer-bar .instant {
+    font-size: 26px;
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  /* ====== LAYOUT: HOW IT WORKS ====== */
+  .how-it-works {
+    padding: 120px 140px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--white);
+  }
+  .how-it-works h1 {
+    font-family: '{{HEADING_FONT}}', system-ui, sans-serif;
+    font-weight: {{HEADING_WEIGHT}};
+    font-size: 72px;
+    color: var(--primary);
+    margin-bottom: 80px;
+    text-align: center;
+  }
+  .how-it-works .steps {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+  }
+  .how-it-works .step {
+    flex: 1;
+    text-align: center;
+    max-width: 480px;
+  }
+  .how-it-works .step-number {
+    width: 100px;
+    height: 100px;
+    background: var(--primary);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0 auto 32px;
+  }
+  .how-it-works .step h3 {
+    font-family: '{{HEADING_FONT}}', system-ui, sans-serif;
+    font-size: 36px;
+    color: var(--primary);
+    margin-bottom: 16px;
+  }
+  .how-it-works .step p {
+    font-size: 26px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+  .how-it-works .connector {
+    display: flex;
+    align-items: center;
+    color: var(--accent);
+    font-size: 48px;
+    padding-top: 20px;
+  }
+
+  /* ====== LAYOUT: FEATURES GRID ====== */
+  .features-grid {
+    padding: 120px 140px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--primary);
+    color: var(--white);
+  }
+  .features-grid h1 {
+    font-family: '{{HEADING_FONT}}', system-ui, sans-serif;
+    font-weight: {{HEADING_WEIGHT}};
+    font-size: 72px;
+    color: var(--white);
+    margin-bottom: 80px;
+    text-align: center;
+  }
+  .features-grid .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+  }
+  .features-grid .feature {
+    background: rgba(255,255,255,0.1);
+    border-radius: 16px;
+    padding: 40px;
+  }
+  .features-grid .feature .icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  .features-grid .feature h3 {
+    font-family: '{{HEADING_FONT}}', system-ui, sans-serif;
+    font-size: 32px;
+    margin-bottom: 12px;
+    color: var(--accent);
+  }
+  .features-grid .feature p {
+    font-size: 24px;
+    line-height: 1.5;
+    opacity: 0.85;
+  }
+
+  /* ====== LAYOUT: WHO ITS FOR ====== */
+  .who-its-for {
+    padding: 120px 140px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .who-its-for h1 {
+    font-family: '{{HEADING_FONT}}', system-ui, sans-serif;
+    font-weight: {{HEADING_WEIGHT}};
+    font-size: 72px;
+    color: var(--primary);
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  .who-its-for .tagline {
+    font-size: 30px;
+    color: var(--text-secondary);
+    text-align: center;
+    margin-bottom: 80px;
+  }
+  .who-its-for .personas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .who-its-for .persona {
+    background: var(--white);
+    border: 2px solid var(--primary);
+    border-radius: 16px;
+    padding: 40px;
+    text-align: center;
+  }
+  .who-its-for .persona .emoji {
+    font-size: 64px;
+    margin-bottom: 20px;
+  }
+  .who-its-for .persona h3 {
+    font-family: '{{HEADING_FONT}}', system-ui, sans-serif;
+    font-size: 30px;
+    color: var(--primary);
+    margin-bottom: 12px;
+  }
+  .who-its-for .persona p {
+    font-size: 24px;
+    color: var(--text-secondary);
+    line-height: 1.4;
+  }
+</style>
+</head>
+<body>
+
+<!-- 
+  TEMPLATE USAGE:
+  
+  The agent selects ONE layout class for the <body> content,
+  fills in the {{VARIABLES}}, and renders via Puppeteer.
+  
+  Available layouts:
+  - .whats-included  (checklist of bundle contents)
+  - .how-it-works    (3-step process)
+  - .features-grid   (4-6 feature cards on dark bg)
+  - .who-its-for     (4 persona cards)
+  
+  The agent can also create new layouts following 
+  the same CSS variable pattern.
+-->
+
+<!-- EXAMPLE: What's Included layout -->
+<div class="whats-included">
+  <span class="badge">Digital Download</span>
+  <h1>{{PRODUCT_NAME}}</h1>
+  <p class="subtitle">{{PRODUCT_SUBTITLE}}</p>
+  <ul class="checklist">
+    <li><span class="check">&#10003;</span> {{ITEM_1}}</li>
+    <li><span class="check">&#10003;</span> {{ITEM_2}}</li>
+    <li><span class="check">&#10003;</span> {{ITEM_3}}</li>
+    <li><span class="check">&#10003;</span> {{ITEM_4}}</li>
+    <li><span class="check">&#10003;</span> {{ITEM_5}}</li>
+    <li><span class="check">&#10003;</span> {{ITEM_6}}</li>
+    <li><span class="check">&#10003;</span> {{ITEM_7}}</li>
+    <li><span class="check">&#10003;</span> {{ITEM_8}}</li>
+  </ul>
+  <div class="footer-bar">
+    <img src="{{LOGO_PATH}}" alt="{{COMPANY_NAME}}">
+    <span class="instant">Instant Download</span>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+{
+  "brand": {
+    "company_name": "Frontier Consulting Group",
+    "legal_name": "Frontier Consulting Group LLC",
+    "dba_names": [
+      "Frontier Property Management",
+      "Frontier Photography",
+      "Highland Creative"
+    ],
+    "website": "fcgok.com",
+    "tagline": "",
+    "location": "Broken Bow, Oklahoma"
+  },
+
+  "colors": {
+    "primary": "#2C3E2D",
+    "secondary": "#8B7355",
+    "accent": "#D4A574",
+    "dark": "#1A1A1A",
+    "light": "#F5F1EB",
+    "white": "#FFFFFF",
+    "text_primary": "#1A1A1A",
+    "text_secondary": "#4A4A4A",
+    "text_on_dark": "#F5F1EB",
+    "success": "#4A7C59",
+    "warning": "#C4923B",
+    "error": "#8B3A3A",
+    "_note": "UPDATE THESE to your actual brand hex codes. These are placeholder woodland-modern tones based on the aesthetic described for Hocha.town and Frontier brands."
+  },
+
+  "fonts": {
+    "heading": "Inter",
+    "heading_weight": "700",
+    "subheading_weight": "600",
+    "body": "Inter",
+    "body_weight": "400",
+    "mono": "JetBrains Mono",
+    "google_fonts_url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap",
+    "_note": "UPDATE to your actual brand fonts. Inter is a safe default that works everywhere."
+  },
+
+  "logo": {
+    "primary": "~/Documents/brand/assets/frontier-logo-primary.png",
+    "dark_bg": "~/Documents/brand/assets/frontier-logo-white.png",
+    "icon_only": "~/Documents/brand/assets/frontier-icon.png",
+    "svg": "~/Documents/brand/assets/frontier-logo.svg",
+    "favicon": "~/Documents/brand/assets/favicon.png",
+    "width_px": 200,
+    "padding_px": 24,
+    "_note": "Place your actual logo files at these paths. The agent will reference them for all branded outputs."
+  },
+
+  "sub_brands": {
+    "hocha_town": {
+      "name": "Hocha.town",
+      "website": "hocha.town",
+      "logo": "~/Documents/brand/assets/hocha-town-logo.png",
+      "colors": {
+        "primary": "#2C3E2D",
+        "accent": "#D4A574"
+      }
+    },
+    "frontier_pm": {
+      "name": "Frontier Property Management",
+      "logo": "~/Documents/brand/assets/frontier-pm-logo.png"
+    },
+    "frontier_photo": {
+      "name": "Frontier Photography",
+      "logo": "~/Documents/brand/assets/frontier-photo-logo.png"
+    },
+    "highland_creative": {
+      "name": "Highland Creative",
+      "logo": "~/Documents/brand/assets/highland-creative-logo.png"
+    }
+  },
+
+  "etsy_shop": {
+    "shop_name": "",
+    "shop_url": "",
+    "listing_image_size": "2000x2000",
+    "thumbnail_size": "570x456",
+    "max_images_per_listing": 10,
+    "watermark": false,
+    "_note": "Fill in your Etsy shop details once created."
+  },
+
+  "mockup_preferences": {
+    "device_scenes": ["macbook_pro", "ipad_pro", "iphone_15", "imac_27"],
+    "background_style": "clean_gradient",
+    "background_colors": ["#F5F1EB", "#FFFFFF", "#2C3E2D"],
+    "shadow": true,
+    "perspective": "front_slight_angle",
+    "lifestyle_scenes": ["desk_workspace", "coffee_shop", "home_office"],
+    "preferred_orientation": "landscape"
+  },
+
+  "pdf_style": {
+    "page_size": "letter",
+    "margin_inches": 1.0,
+    "header_height_px": 80,
+    "footer_height_px": 40,
+    "header_logo_position": "left",
+    "header_line": true,
+    "footer_text": "© Frontier Consulting Group LLC | fcgok.com",
+    "page_numbers": true,
+    "page_number_position": "bottom_right"
+  },
+
+  "social_media": {
+    "instagram_post_size": "1080x1080",
+    "instagram_story_size": "1080x1920",
+    "facebook_post_size": "1200x630",
+    "pinterest_pin_size": "1000x1500",
+    "etsy_banner_size": "3360x840",
+    "youtube_thumbnail_size": "1280x720"
+  },
+
+  "copy_style": {
+    "tone": "direct, knowledgeable, no-BS",
+    "avoid": ["em-dashes", "leverage", "streamline", "game-changer", "level up", "unlock", "synergy", "cutting-edge", "robust", "seamless"],
+    "prefer": ["short sentences", "specific numbers", "contractor/builder voice", "second person (you/your)"],
+    "never_start_with": ["Welcome to", "Thank you for", "In today's world", "Are you looking for"],
+    "max_emoji_per_post": 2
+  }
+}
